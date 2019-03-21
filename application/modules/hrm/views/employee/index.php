@@ -333,13 +333,13 @@
                                             <div class="help-block"><?php echo form_error('twitter_url'); ?></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
-                                        <div class="item form-group">
-                                            <label for="google_plus_url"><?php echo $this->lang->line('google_plus_url'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="google_plus_url"  id="google_plus_url" value="<?php echo isset($post['google_plus_url']) ?  $post['google_plus_url'] : ''; ?>" placeholder="<?php echo $this->lang->line('google_plus_url'); ?>" type="text" autocomplete="off">
-                                            <div class="help-block"><?php echo form_error('google_plus_url'); ?></div>
-                                        </div>
-                                    </div>
+<!--                                    <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                        <div class="item form-group">-->
+<!--                                            <label for="google_plus_url">--><?php //echo $this->lang->line('google_plus_url'); ?><!-- </label>-->
+<!--                                            <input  class="form-control col-md-7 col-xs-12"  name="google_plus_url"  id="google_plus_url" value="--><?php //echo isset($post['google_plus_url']) ?  $post['google_plus_url'] : ''; ?><!--" placeholder="--><?php //echo $this->lang->line('google_plus_url'); ?><!--" type="text" autocomplete="off">-->
+<!--                                            <div class="help-block">--><?php //echo form_error('google_plus_url'); ?><!--</div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <div class="item form-group">
                                             <label for="instagram_url"><?php echo $this->lang->line('instagram_url'); ?> </label>

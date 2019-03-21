@@ -322,13 +322,13 @@
                                             <div class="help-block"><?php echo form_error('twitter_url'); ?></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
-                                        <div class="item form-group">
-                                            <label for="google_plus_url"><?php echo $this->lang->line('google_plus_url'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="google_plus_url"  id="google_plus_url" value="<?php echo isset($post['google_plus_url']) ?  $post['google_plus_url'] : ''; ?>" placeholder="<?php echo $this->lang->line('google_plus_url'); ?>" type="text" autocomplete="">
-                                            <div class="help-block"><?php echo form_error('google_plus_url'); ?></div>
-                                        </div>
-                                    </div>
+<!--                                    <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                        <div class="item form-group">-->
+<!--                                            <label for="google_plus_url">--><?php //echo $this->lang->line('google_plus_url'); ?><!-- </label>-->
+<!--                                            <input  class="form-control col-md-7 col-xs-12"  name="google_plus_url"  id="google_plus_url" value="--><?php //echo isset($post['google_plus_url']) ?  $post['google_plus_url'] : ''; ?><!--" placeholder="--><?php //echo $this->lang->line('google_plus_url'); ?><!--" type="text" autocomplete="">-->
+<!--                                            <div class="help-block">--><?php //echo form_error('google_plus_url'); ?><!--</div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <div class="item form-group">
                                             <label for="instagram_url"><?php echo $this->lang->line('instagram_url'); ?> </label>
@@ -440,20 +440,20 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
-                                        <div class="item form-group">
-                                            <label for="blood_group"><?php echo $this->lang->line('blood_group'); ?> </label>
-                                            <select  class="form-control col-md-7 col-xs-12" name="blood_group" id="blood_group">
-                                                <option value="">--<?php echo $this->lang->line('select'); ?>--</option> 
-                                                <?php $bloods = get_blood_group(); ?>
-                                                <?php foreach($bloods as $key=>$value){ ?>
-                                                    <option value="<?php echo $key; ?>" <?php if($teacher->blood_group == $key){ echo 'selected="selected"';} ?>><?php echo $value; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        <div class="help-block"><?php echo form_error('blood_group'); ?></div> 
-                                        </div>
-                                    </div>
-                                    
+<!--                                    <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                        <div class="item form-group">-->
+<!--                                            <label for="blood_group">--><?php //echo $this->lang->line('blood_group'); ?><!-- </label>-->
+<!--                                            <select  class="form-control col-md-7 col-xs-12" name="blood_group" id="blood_group">-->
+<!--                                                <option value="">----><?php //echo $this->lang->line('select'); ?><!----</option> -->
+<!--                                                --><?php //$bloods = get_blood_group(); ?>
+<!--                                                --><?php //foreach($bloods as $key=>$value){ ?>
+<!--                                                    <option value="--><?php //echo $key; ?><!--" --><?php //if($teacher->blood_group == $key){ echo 'selected="selected"';} ?><!-->--><?php //echo $value; ?><!--</option>-->
+<!--                                                --><?php //} ?>
+<!--                                            </select>-->
+<!--                                        <div class="help-block">--><?php //echo form_error('blood_group'); ?><!--</div> -->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    -->
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <div class="item form-group">
                                             <label for="religion"><?php echo $this->lang->line('religion'); ?> </label>
