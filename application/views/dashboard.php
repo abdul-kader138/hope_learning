@@ -2,7 +2,7 @@
 <div class="row ">
     <div class="tile_count">
      <?php if(has_permission(VIEW, 'student', 'student')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-group"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('student'); ?></span>
             <div class="count"><?php echo $total_student ? $total_student : 0; ?></div>
@@ -10,7 +10,7 @@
     </div>
      <?php } ?>
      <?php if(has_permission(VIEW, 'guardian', 'guardian')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-paw"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('guardian'); ?></span>
             <div class="count"><?php echo $total_guardian ? $total_guardian : 0; ?></div>
@@ -18,7 +18,7 @@
     </div>
      <?php } ?>
     <?php if(has_permission(VIEW, 'teacher', 'teacher')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-users"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('teacher'); ?></span>
             <div class="count"><?php echo $total_teacher ? $total_teacher : 0; ?></div>
@@ -26,35 +26,35 @@
     </div>
     <?php } ?>
     <?php if(has_permission(VIEW, 'hrm', 'employee')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <div class="stats-count-inner">
             <span class="count_top"><i class="fa fa-user-md"></i> <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('employee'); ?></span>
             <div class="count"><?php echo $total_employee ? $total_employee :0; ?></div>
         </div>
     </div>
     <?php } ?>
-    <?php if(has_permission(VIEW, 'accounting', 'income')){ ?>
-        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <div class="stats-count-inner">
-                <span class="count_top"> 
-                    <?php echo isset($school_setting->currency_symbol) ? $school_setting->currency_symbol : '$';  ?> 
-                    <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('income'); ?>
-                </span>
-                <div class="count green"><?php echo $total_income ? $total_income : '0.00'; ?></div>
-            </div>
-        </div>
-     <?php } ?>
-    <?php if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
-    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-        <div class="stats-count-inner">
-            <span class="count_top">
-                <?php echo isset($school_setting->currency_symbol) ? $school_setting->currency_symbol : '$';  ?> 
-                <?php echo $this->lang->line('total'); ?> <?php echo $this->lang->line('expenditure'); ?>
-            </span>
-            <div class="count red"><?php echo $total_expenditure? $total_expenditure : '0.00'; ?></div>
-        </div>
-    </div>
-     <?php } ?>  
+<!--    --><?php //if(has_permission(VIEW, 'accounting', 'income')){ ?>
+<!--        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">-->
+<!--            <div class="stats-count-inner">-->
+<!--                <span class="count_top"> -->
+<!--                    --><?php //echo isset($school_setting->currency_symbol) ? $school_setting->currency_symbol : '$';  ?><!-- -->
+<!--                    --><?php //echo $this->lang->line('total'); ?><!-- --><?php //echo $this->lang->line('income'); ?>
+<!--                </span>-->
+<!--                <div class="count green">--><?php //echo $total_income ? $total_income : '0.00'; ?><!--</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--     --><?php //} ?>
+<!--    --><?php //if(has_permission(VIEW, 'accounting', 'expenditure')){ ?>
+<!--    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">-->
+<!--        <div class="stats-count-inner">-->
+<!--            <span class="count_top">-->
+<!--                --><?php //echo isset($school_setting->currency_symbol) ? $school_setting->currency_symbol : '$';  ?><!-- -->
+<!--                --><?php //echo $this->lang->line('total'); ?><!-- --><?php //echo $this->lang->line('expenditure'); ?>
+<!--            </span>-->
+<!--            <div class="count red">--><?php //echo $total_expenditure? $total_expenditure : '0.00'; ?><!--</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--     --><?php //} ?><!--  -->
     </div>
 </div>  
 <!-- /top tiles -->

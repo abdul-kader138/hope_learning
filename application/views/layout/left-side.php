@@ -447,41 +447,41 @@
                         </li> 
                     <?php } ?>
                     
-                    <?php if(has_permission(VIEW, 'transport', 'vehicle') || 
-                            has_permission(VIEW, 'transport', 'route') || 
-                            has_permission(VIEW, 'transport', 'member')){ ?>        
-                        <li><a><i class="fa fa-bus"></i> <?php echo $this->lang->line('transport'); ?> <span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <?php if(has_permission(VIEW, 'transport', 'vehicle')){ ?>
-                                    <li><a href="<?php echo site_url('transport/vehicle/index/'); ?>"><?php echo $this->lang->line('vehicle'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'transport', 'route')){ ?>
-                                    <li><a href="<?php echo site_url('transport/route/index/'); ?>"><?php echo $this->lang->line('manage_route'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'transport', 'member')){ ?>
-                                    <li><a href="<?php echo site_url('transport/member/index/'); ?>"><?php echo $this->lang->line('transport'); ?> <?php echo $this->lang->line('member'); ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>  
-                    <?php } ?>
-                        
-                    <?php if(has_permission(VIEW, 'hostel', 'hostel') || 
-                            has_permission(VIEW, 'hostel', 'room') || 
-                            has_permission(VIEW, 'hostel', 'member')){ ?>        
-                        <li><a><i class="fa fa-hotel"></i> <?php echo $this->lang->line('hostel'); ?> <span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <?php if(has_permission(VIEW, 'hostel', 'hostel')){ ?>
-                                    <li><a href="<?php echo site_url('hostel/index/'); ?>"><?php echo $this->lang->line('manage_hostel'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'hostel', 'room')){ ?>
-                                    <li><a href="<?php echo site_url('hostel/room/index/'); ?>"><?php echo $this->lang->line('manage_room'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'hostel', 'member')){ ?>
-                                    <li><a href="<?php echo site_url('hostel/member/index/'); ?>"><?php echo $this->lang->line('hostel'); ?> <?php echo $this->lang->line('member'); ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>
-                   <?php } ?>
+<!--                    --><?php //if(has_permission(VIEW, 'transport', 'vehicle') ||
+//                            has_permission(VIEW, 'transport', 'route') ||
+//                            has_permission(VIEW, 'transport', 'member')){ ?><!--        -->
+<!--                        <li><a><i class="fa fa-bus"></i> --><?php //echo $this->lang->line('transport'); ?><!-- <span class="fa fa-chevron-down"></span></a>-->
+<!--                            <ul class="nav child_menu">-->
+<!--                                --><?php //if(has_permission(VIEW, 'transport', 'vehicle')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('transport/vehicle/index/'); ?><!--">--><?php //echo $this->lang->line('vehicle'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'transport', 'route')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('transport/route/index/'); ?><!--">--><?php //echo $this->lang->line('manage_route'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'transport', 'member')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('transport/member/index/'); ?><!--">--><?php //echo $this->lang->line('transport'); ?><!-- --><?php //echo $this->lang->line('member'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                            </ul>-->
+<!--                        </li>  -->
+<!--                    --><?php //} ?>
+<!--                        -->
+<!--                    --><?php //if(has_permission(VIEW, 'hostel', 'hostel') ||
+//                            has_permission(VIEW, 'hostel', 'room') ||
+//                            has_permission(VIEW, 'hostel', 'member')){ ?><!--        -->
+<!--                        <li><a><i class="fa fa-hotel"></i> --><?php //echo $this->lang->line('hostel'); ?><!-- <span class="fa fa-chevron-down"></span></a>-->
+<!--                            <ul class="nav child_menu">-->
+<!--                                --><?php //if(has_permission(VIEW, 'hostel', 'hostel')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('hostel/index/'); ?><!--">--><?php //echo $this->lang->line('manage_hostel'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'hostel', 'room')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('hostel/room/index/'); ?><!--">--><?php //echo $this->lang->line('manage_room'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'hostel', 'member')){ ?>
+<!--                                    <li><a href="--><?php //echo site_url('hostel/member/index/'); ?><!--">--><?php //echo $this->lang->line('hostel'); ?><!-- --><?php //echo $this->lang->line('member'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                   --><?php //} ?>
                     
                     <?php if(has_permission(VIEW, 'message', 'message')){ ?>    
                         <li><a href="<?php echo site_url('message/inbox'); ?>"><i class="fa fa-comments-o"></i> <?php echo $this->lang->line('message'); ?></a></li>                   
@@ -527,21 +527,21 @@
                     <?php } ?>
                         
                         
-                    <?php if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
-                        <li><a><i class="fa fa-dollar"></i> <?php echo $this->lang->line('payroll'); ?> <span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <?php if(has_permission(VIEW, 'payroll', 'grade')){ ?>  
-                                    <li><a href="<?php echo site_url('payroll/grade/index'); ?>"><?php echo $this->lang->line('salary_grade'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'payroll', 'payment')){ ?>  
-                                    <li><a href="<?php echo site_url('payroll/payment/index'); ?>"> <?php echo $this->lang->line('salary'); ?> <?php echo $this->lang->line('payment'); ?></a></li>
-                                <?php } ?>
-                                <?php if(has_permission(VIEW, 'payroll', 'payment')){ ?>  
-                                    <li><a href="<?php echo site_url('payroll/history/index'); ?>"> <?php echo $this->lang->line('payment'); ?> <?php echo $this->lang->line('history'); ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </li>   
-                    <?php } ?>    
+<!--                    --><?php //if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
+<!--                        <li><a><i class="fa fa-dollar"></i> --><?php //echo $this->lang->line('payroll'); ?><!-- <span class="fa fa-chevron-down"></span></a>-->
+<!--                            <ul class="nav child_menu">-->
+<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'grade')){ ?><!--  -->
+<!--                                    <li><a href="--><?php //echo site_url('payroll/grade/index'); ?><!--">--><?php //echo $this->lang->line('salary_grade'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'payment')){ ?><!--  -->
+<!--                                    <li><a href="--><?php //echo site_url('payroll/payment/index'); ?><!--"> --><?php //echo $this->lang->line('salary'); ?><!-- --><?php //echo $this->lang->line('payment'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'payment')){ ?><!--  -->
+<!--                                    <li><a href="--><?php //echo site_url('payroll/history/index'); ?><!--"> --><?php //echo $this->lang->line('payment'); ?><!-- --><?php //echo $this->lang->line('history'); ?><!--</a></li>-->
+<!--                                --><?php //} ?>
+<!--                            </ul>-->
+<!--                        </li>   -->
+<!--                    --><?php //} ?><!--    -->
                     
                                         
                     <?php if(has_permission(VIEW, 'accounting', 'discount') || 

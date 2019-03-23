@@ -80,7 +80,7 @@
                                         <?php } ?>
                                         <th><?php echo $this->lang->line('photo'); ?></th>
                                         <th><?php echo $this->lang->line('name'); ?></th>
-                                        <th><?php echo $this->lang->line('group'); ?></th>
+                                        <th><?php echo $this->lang->line('form_standard'); ?></th>
                                         <th><?php echo $this->lang->line('class'); ?></th>
                                         <th><?php echo $this->lang->line('section'); ?></th>
                                         <th><?php echo $this->lang->line('roll_no'); ?></th>
@@ -186,7 +186,7 @@
                                     
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                             <label for="blood_group"><?php echo $this->lang->line('blood_group'); ?></label>
+                                             <label for="blood_group"><?php echo $this->lang->line('blood_group_s'); ?></label>
                                               <select  class="form-control col-md-7 col-xs-12" name="blood_group" id="blood_group">
                                                 <option value="">--<?php echo $this->lang->line('select'); ?>--</option>
                                                 <?php $bloods = get_blood_group(); ?>
@@ -197,13 +197,13 @@
                                             <div class="help-block"><?php echo form_error('blood_group'); ?></div>
                                          </div>
                                      </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
-                                         <div class="item form-group">
-                                              <label for="religion"><?php echo $this->lang->line('religion'); ?></label>
-                                              <input  class="form-control col-md-7 col-xs-12"  name="religion"  id="add_religion" value="<?php echo isset($post['religion']) ?  $post['religion'] : ''; ?>" placeholder="<?php echo $this->lang->line('religion'); ?>" type="text" autocomplete="off">
-                                               <div class="help-block"><?php echo form_error('religion'); ?></div>
-                                         </div>
-                                     </div>
+<!--                                    <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                         <div class="item form-group">-->
+<!--                                              <label for="religion">--><?php //echo $this->lang->line('religion'); ?><!--</label>-->
+<!--                                              <input  class="form-control col-md-7 col-xs-12"  name="religion"  id="add_religion" value="--><?php //echo isset($post['religion']) ?  $post['religion'] : ''; ?><!--" placeholder="--><?php //echo $this->lang->line('religion'); ?><!--" type="text" autocomplete="off">-->
+<!--                                               <div class="help-block">--><?php //echo form_error('religion'); ?><!--</div>-->
+<!--                                         </div>-->
+<!--                                     </div>-->
                                 </div>
                                 
                                  <div class="row">                  
@@ -214,7 +214,7 @@
                                 <div class="row"> 
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <div class="item form-group">
-                                            <label for="guardian_id"><?php echo $this->lang->line('guardian'); ?> <span class="required">*</span></label>
+                                            <label for="guardian_id"><?php echo $this->lang->line('guardians'); ?> <span class="required">*</span></label>
                                             <select  class="form-control col-md-7 col-xs-12 quick-field" name="guardian_id" id="add_guardian_id" required="required" onchange="get_guardian_by_id(this.value);">
                                                 <option value="">--<?php echo $this->lang->line('select'); ?>--</option>
                                                 <?php foreach($guardians as $obj){ ?>
@@ -302,7 +302,7 @@
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="group"><?php echo $this->lang->line('group'); ?> </label>
+                                            <label for="group"><?php echo $this->lang->line('form_standard'); ?> </label>
                                             <select  class="form-control col-md-7 col-xs-12" name="group" id="group">
                                                 <option value="">--<?php echo $this->lang->line('select'); ?>--</option>
                                                 <?php $groups = get_groups(); ?>
@@ -340,25 +340,25 @@
                                             <div class="help-block"><?php echo form_error('role_id'); ?></div>
                                          </div>
                                      </div>
-                                     <div class="col-md-3 col-sm-3 col-xs-12">
-                                         <div class="item form-group">
-                                            <label for="discount_id"><?php echo $this->lang->line('discount'); ?></label>
-                                            <select  class="form-control col-md-7 col-xs-12 quick-field" name="discount_id" id="add_discount_id">
-                                                <option value="">--<?php echo $this->lang->line('select'); ?>--</option>
-                                                <?php foreach($discounts as $obj){ ?>                                                    
-                                                    <option value="<?php echo $obj->id; ?>"><?php echo $obj->title; ?> [<?php echo $obj->amount; ?>%]</option>                                                   
-                                                <?php } ?>
-                                            </select>
-                                            <div class="help-block"><?php echo form_error('discount_id'); ?></div>
-                                         </div>
-                                     </div>
-                                     <div class="col-md-3 col-sm-3 col-xs-12">
-                                         <div class="item form-group">
-                                            <label for="second_language"><?php echo $this->lang->line('second'); ?> <?php echo $this->lang->line('language'); ?></label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="second_language"  id="second_language" value="<?php echo isset($post['second_language']) ?  $post['second_language'] : ''; ?>" placeholder="<?php echo $this->lang->line('second'); ?> <?php echo $this->lang->line('second'); ?>" type="text" autocomplete="off">
-                                            <div class="help-block"><?php echo form_error('second_language'); ?></div>
-                                         </div>
-                                     </div>
+<!--                                     <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                         <div class="item form-group">-->
+<!--                                            <label for="discount_id">--><?php //echo $this->lang->line('discount'); ?><!--</label>-->
+<!--                                            <select  class="form-control col-md-7 col-xs-12 quick-field" name="discount_id" id="add_discount_id">-->
+<!--                                                <option value="">----><?php //echo $this->lang->line('select'); ?><!----</option>-->
+<!--                                                --><?php //foreach($discounts as $obj){ ?><!--                                                    -->
+<!--                                                    <option value="--><?php //echo $obj->id; ?><!--">--><?php //echo $obj->title; ?><!-- [--><?php //echo $obj->amount; ?><!--%]</option>                                                   -->
+<!--                                                --><?php //} ?>
+<!--                                            </select>-->
+<!--                                            <div class="help-block">--><?php //echo form_error('discount_id'); ?><!--</div>-->
+<!--                                         </div>-->
+<!--                                     </div>-->
+<!--                                     <div class="col-md-3 col-sm-3 col-xs-12">-->
+<!--                                         <div class="item form-group">-->
+<!--                                            <label for="second_language">--><?php //echo $this->lang->line('second'); ?><!-- --><?php //echo $this->lang->line('language'); ?><!--</label>-->
+<!--                                            <input  class="form-control col-md-7 col-xs-12"  name="second_language"  id="second_language" value="--><?php //echo isset($post['second_language']) ?  $post['second_language'] : ''; ?><!--" placeholder="--><?php //echo $this->lang->line('second'); ?><!-- --><?php //echo $this->lang->line('second'); ?><!--" type="text" autocomplete="off">-->
+<!--                                            <div class="help-block">--><?php //echo form_error('second_language'); ?><!--</div>-->
+<!--                                         </div>-->
+<!--                                     </div>-->
                                 </div>
                                 
                                 <div class="row">                  
@@ -385,7 +385,7 @@
                                     
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label ><?php echo $this->lang->line('transfer'); ?> <?php echo $this->lang->line('certificate'); ?> </label>
+                                            <label > <?php echo $this->lang->line('document'); ?> </label>
                                             <div class="btn btn-default btn-file">
                                                 <i class="fa fa-paperclip"></i> <?php echo $this->lang->line('upload'); ?>
                                                 <input  class="form-control col-md-7 col-xs-12"  name="transfer_certificate"  id="transfer_certificate" type="file">
@@ -399,48 +399,48 @@
                                 
                                 <div class="row">                  
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h5 class="column-title"><strong><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('information'); ?>:</strong></h5>
+                                        <h5 class="column-title"><strong><?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('information'); ?>:</strong></h5>
                                     </div>
                                 </div> 
                                 <div class="row">  
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="father_name"><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('name'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="father_name"  id="father_name" value="<?php echo isset($post['father_name']) ?  $post['father_name'] : ''; ?>" placeholder="<?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('name'); ?>" type="text" autocomplete="off">
+                                            <label for="father_name"><?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('name'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="father_name"  id="father_name" value="<?php echo isset($post['father_name']) ?  $post['father_name'] : ''; ?>" placeholder="<?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('name'); ?>" type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('father_name'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="father_phone"><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('phone'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="father_phone"  id="father_phone" value="<?php echo isset($post['father_phone']) ?  $post['father_phone'] : ''; ?>" placeholder="<?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('phone'); ?>"  type="text" autocomplete="off">
+                                            <label for="father_phone"><?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('phone'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="father_phone"  id="father_phone" value="<?php echo isset($post['father_phone']) ?  $post['father_phone'] : ''; ?>" placeholder="<?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('phone'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('father_phone'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="father_education"><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('education'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="father_education"  id="father_education" value="<?php echo isset($post['father_education']) ?  $post['father_education'] : ''; ?>" placeholder="<?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('education'); ?>"  type="text" autocomplete="off">
+                                            <label for="father_education"><?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('address'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="father_education"  id="father_education" value="<?php echo isset($post['father_education']) ?  $post['father_education'] : ''; ?>" placeholder="<?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('address'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('father_education'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="father_profession"><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('profession'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="father_profession"  id="father_profession" value="<?php echo isset($post['father_profession']) ?  $post['father_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('profession'); ?>"  type="text" autocomplete="off">
+                                            <label for="father_profession"><?php echo $this->lang->line('profession'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="father_profession"  id="father_profession" value="<?php echo isset($post['father_profession']) ?  $post['father_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('profession'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('father_profession'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="father_designation"><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('designation'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="father_designation"  id="father_designation" value="<?php echo isset($post['father_designation']) ?  $post['father_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('designation'); ?>"  type="text" autocomplete="off">
+                                            <label for="father_designation"><?php echo $this->lang->line('designation'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="father_designation"  id="father_designation" value="<?php echo isset($post['father_designation']) ?  $post['father_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('designation'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('father_designation'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label ><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('photo'); ?> </label>
+                                            <label ><?php echo $this->lang->line('fathers'); ?> <?php echo $this->lang->line('photo'); ?> </label>
                                             <div class="btn btn-default btn-file">
                                                 <i class="fa fa-paperclip"></i> <?php echo $this->lang->line('upload'); ?>
                                                 <input  class="form-control col-md-7 col-xs-12"  name="father_photo"  id="father_photo" type="file">
@@ -453,48 +453,48 @@
                                 
                                 <div class="row">                  
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h5 class="column-title"><strong><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('information'); ?>:</strong></h5>
+                                        <h5 class="column-title"><strong><?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('information'); ?>:</strong></h5>
                                     </div>
                                 </div> 
                                 <div class="row">  
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="mother_name"><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('name'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_name"  id="mother_name" value="<?php echo isset($post['mother_name']) ?  $post['mother_name'] : ''; ?>" placeholder="<?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('name'); ?>" type="text" autocomplete="off">
+                                            <label for="mother_name"><?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('name'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_name"  id="mother_name" value="<?php echo isset($post['mother_name']) ?  $post['mother_name'] : ''; ?>" placeholder="<?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('name'); ?>" type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('mother_name'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="mother_phone"><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('phone'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_phone"  id="mother_phone" value="<?php echo isset($post['mother_phone']) ?  $post['mother_phone'] : ''; ?>" placeholder="<?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('phone'); ?>"  type="text" autocomplete="off">
+                                            <label for="mother_phone"><?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('phone'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_phone"  id="mother_phone" value="<?php echo isset($post['mother_phone']) ?  $post['mother_phone'] : ''; ?>" placeholder="<?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('phone'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('mother_phone'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="mother_education"><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('education'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_education"  id="mother_education" value="<?php echo isset($post['mother_education']) ?  $post['mother_education'] : ''; ?>" placeholder="<?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('education'); ?>"  type="text" autocomplete="off">
+                                            <label for="mother_education"><?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('address'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_education"  id="mother_education" value="<?php echo isset($post['mother_education']) ?  $post['mother_education'] : ''; ?>" placeholder="<?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('address'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('mother_education'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="mother_profession"><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('profession'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_profession"  id="mother_profession" value="<?php echo isset($post['mother_profession']) ?  $post['mother_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('profession'); ?>"  type="text" autocomplete="off">
+                                            <label for="mother_profession"><?php echo $this->lang->line('profession'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_profession"  id="mother_profession" value="<?php echo isset($post['mother_profession']) ?  $post['mother_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('profession'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('mother_profession'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label for="mother_designation"><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('designation'); ?> </label>
-                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_designation"  id="mother_designation" value="<?php echo isset($post['mother_designation']) ?  $post['mother_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('designation'); ?>"  type="text" autocomplete="off">
+                                            <label for="mother_designation"><?php echo $this->lang->line('designation'); ?> </label>
+                                            <input  class="form-control col-md-7 col-xs-12"  name="mother_designation"  id="mother_designation" value="<?php echo isset($post['mother_designation']) ?  $post['mother_profession'] : ''; ?>" placeholder="<?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('designation'); ?>"  type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('mother_designation'); ?></div>
                                          </div>
                                      </div>
                                      <div class="col-md-3 col-sm-3 col-xs-12">
                                          <div class="item form-group">
-                                            <label ><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('photo'); ?> </label>
+                                            <label ><?php echo $this->lang->line('mothers'); ?> <?php echo $this->lang->line('photo'); ?> </label>
                                             <div class="btn btn-default btn-file">
                                                 <i class="fa fa-paperclip"></i> <?php echo $this->lang->line('upload'); ?>
                                                 <input  class="form-control col-md-7 col-xs-12"  name="mother_photo"  id="mother_photo" type="file">

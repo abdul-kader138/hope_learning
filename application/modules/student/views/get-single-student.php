@@ -35,12 +35,14 @@
                     <tr>
                         <th><?php echo $this->lang->line('gender'); ?></th>
                         <td><?php echo $this->lang->line($student->gender); ?></td>
-                        <th><?php echo $this->lang->line('blood_group'); ?></th>
+                        <th><?php echo $this->lang->line('blood_group_s'); ?></th>
                         <td><?php echo $this->lang->line($student->blood_group); ?></td>
                     </tr>
                     <tr>
-                        <th><?php echo $this->lang->line('religion'); ?></th>
-                        <td><?php echo $student->religion; ?></td>
+<!--                        <th>--><?php //echo $this->lang->line('religion'); ?><!--</th>-->
+<!--                        <td>--><?php //echo $student->religion; ?><!--</td>-->
+                        <th></th>
+                        <td></td>
                         <th><?php echo $this->lang->line('phone'); ?></th>
                         <td><?php echo $student->phone; ?></td>
                     </tr>
@@ -69,12 +71,12 @@
                         <td><?php echo $student->registration_no; ?></td>
                     </tr>
 
-                    <tr>
-                        <th><?php echo $this->lang->line('discount'); ?></th>
-                        <td><?php echo $student->discount_title . ' [ ' . $student->amount . '% ]'; ?></td>
-                        <th><?php echo $this->lang->line('second'); ?> <?php echo $this->lang->line('language'); ?></th>
-                        <td><?php echo $student->second_language; ?></td>
-                    </tr>
+<!--                    <tr>-->
+<!--                        <th>--><?php //echo $this->lang->line('discount'); ?><!--</th>-->
+<!--                        <td>--><?php //echo $student->discount_title . ' [ ' . $student->amount . '% ]'; ?><!--</td>-->
+<!--                        <th>--><?php //echo $this->lang->line('second'); ?><!-- --><?php //echo $this->lang->line('language'); ?><!--</th>-->
+<!--                        <td>--><?php //echo $student->second_language; ?><!--</td>-->
+<!--                    </tr>-->
                     <tr>
                         <th><?php echo $this->lang->line('previous'); ?> <?php echo $this->lang->line('school'); ?> </th>
                         <td><?php echo $student->previous_school; ?></td>
@@ -84,7 +86,7 @@
                     </tr>
                     
                     <tr>
-                        <th><?php echo $this->lang->line('group'); ?></th>
+                        <th><?php echo $this->lang->line('form_standard'); ?></th>
                         <td><?php echo $this->lang->line($student->group); ?></td>
                         <th><?php echo $this->lang->line('health_condition'); ?></th>
                         <td><?php echo $student->health_condition; ?></td>
@@ -106,7 +108,7 @@
             <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                 <tbody>
                     <tr>
-                        <th><?php echo $this->lang->line('guardian'); ?></th>
+                        <th><?php echo $this->lang->line('guardians'); ?></th>
                         <td><?php echo $guardian->name; ?></td>
                         <th><?php echo $this->lang->line('relation_with'); ?></th>
                         <td><?php echo $student->relation_with; ?></td>
@@ -119,7 +121,7 @@
                         
                     </tr>
                     <tr>
-                        <th><?php echo $this->lang->line('present'); ?> <?php echo $this->lang->line('address'); ?></th>
+                        <th><?php echo $this->lang->line('guardian'); ?> <?php echo $this->lang->line('address'); ?></th>
                         <td><?php echo $guardian->present_address; ?></td>                        
                         <th><?php echo $this->lang->line('permanent'); ?> <?php echo $this->lang->line('address'); ?></th>
                         <td><?php echo $guardian->permanent_address; ?></td>
@@ -172,9 +174,9 @@
                         <td><?php echo $student->mother_education; ?></td>                       
                     </tr>
                     <tr>
-                        <th><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('education'); ?></th>
+                        <th><?php echo $this->lang->line('father'); ?> <?php echo $this->lang->line('address'); ?></th>
                         <td><?php echo $student->father_education; ?></td>                       
-                        <th><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('education'); ?></th>
+                        <th><?php echo $this->lang->line('mother'); ?> <?php echo $this->lang->line('address'); ?></th>
                         <td><?php echo $student->mother_education; ?></td>                       
                     </tr>
                     <tr>
