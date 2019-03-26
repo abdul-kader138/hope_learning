@@ -527,21 +527,21 @@
                     <?php } ?>
                         
                         
-<!--                    --><?php //if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
-<!--                        <li><a><i class="fa fa-dollar"></i> --><?php //echo $this->lang->line('payroll'); ?><!-- <span class="fa fa-chevron-down"></span></a>-->
-<!--                            <ul class="nav child_menu">-->
-<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'grade')){ ?><!--  -->
-<!--                                    <li><a href="--><?php //echo site_url('payroll/grade/index'); ?><!--">--><?php //echo $this->lang->line('salary_grade'); ?><!--</a></li>-->
-<!--                                --><?php //} ?>
-<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'payment')){ ?><!--  -->
-<!--                                    <li><a href="--><?php //echo site_url('payroll/payment/index'); ?><!--"> --><?php //echo $this->lang->line('salary'); ?><!-- --><?php //echo $this->lang->line('payment'); ?><!--</a></li>-->
-<!--                                --><?php //} ?>
-<!--                                --><?php //if(has_permission(VIEW, 'payroll', 'payment')){ ?><!--  -->
-<!--                                    <li><a href="--><?php //echo site_url('payroll/history/index'); ?><!--"> --><?php //echo $this->lang->line('payment'); ?><!-- --><?php //echo $this->lang->line('history'); ?><!--</a></li>-->
-<!--                                --><?php //} ?>
-<!--                            </ul>-->
-<!--                        </li>   -->
-<!--                    --><?php //} ?><!--    -->
+                    <?php if(has_permission(VIEW, 'payroll', 'grade') || has_permission(VIEW, 'payroll', 'payment')){ ?>
+                        <li><a><i class="fa fa-dollar"></i> <?php echo $this->lang->line('payroll'); ?> <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <?php if(has_permission(VIEW, 'payroll', 'grade')){ ?>
+                                    <li><a href="<?php echo site_url('payroll/grade/index'); ?>"><?php echo $this->lang->line('salary_grade'); ?></a></li>
+                                <?php } ?>
+                                <?php if(has_permission(VIEW, 'payroll', 'payment')){ ?>
+                                    <li><a href="<?php echo site_url('payroll/payment/index'); ?>"> <?php echo $this->lang->line('salary'); ?> <?php echo $this->lang->line('payment'); ?></a></li>
+                                <?php } ?>
+                                <?php if(has_permission(VIEW, 'payroll', 'payment')){ ?>
+                                    <li><a href="<?php echo site_url('payroll/history/index'); ?>"> <?php echo $this->lang->line('payment'); ?> <?php echo $this->lang->line('history'); ?></a></li>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                    <?php } ?>
                     
                                         
                     <?php if(has_permission(VIEW, 'accounting', 'discount') || 

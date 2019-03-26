@@ -267,15 +267,14 @@ class Student extends MY_Controller {
      * @return          : null 
      * ********************************************************** */
     public function get_single_student(){
-        
         $this->load->helper('report');
         $student_id = $this->input->post('student_id');
-        
+
         $student = $this->student->get_single('students', array('id'=>$student_id));
-               
+
         $school = $this->student->get_school_by_id($student->school_id);
         
-        $this->data['student'] = $this->student->get_single_student($student_id, $school->academic_year_id);                       
+        $this->data['student'] = $this->student->get_single_student($student_id, $school->academic_year_id);
         $this->data['guardian'] = $this->student->get_single_guardian($this->data['student']->guardian_id);
         
         $this->data['days'] = 31;
@@ -284,12 +283,11 @@ class Student extends MY_Controller {
         $this->data['section_id'] = $this->data['student']->section_id;
         $this->data['student_id'] = $student_id;
         $this->data['school_id'] = $student->school_id;
-        
+
         $this->data['exams'] = $this->student->get_list('exams', array('status' => 1, 'school_id'=>$student->school_id, 'academic_year_id' => $school->academic_year_id), '', '', '', 'id', 'ASC');
-        $this->data['invoices'] = $this->student->get_invoice_list($student_id);  
-        $this->data['activity'] = $this->student->get_activity_list($student_id);  
-        
-        echo $this->load->view('get-single-student', $this->data);
+        $this->data['invoices'] = $this->student->get_invoice_list($student_id);
+        $this->data['activity'] = $this->student->get_activity_list($student_id);
+        echo $this->load->view('student/get-single-student', $this->data);
     }
     
     

@@ -73,7 +73,7 @@ $route['terms'] = 'web/terms';
 $route['about'] = 'web/about';
 */
 $route['page/(:any)'] = 'web/page/$1';
-
+$route['default_controller'] = 'welcome';
 $route['login'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

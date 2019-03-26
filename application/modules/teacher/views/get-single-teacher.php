@@ -4,14 +4,14 @@
         <li class=""><a href="#tab_social_info"   role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-share"></i> <?php echo $this->lang->line('social'); ?> <?php echo $this->lang->line('information'); ?></a> </li>
     </ul>
     <br/>
-    
      <div class="tab-content">
         <div  class="tab-pane fade in active" id="tab_basic_info" > 
             <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                 <tbody>
                     <tr>
                         <th><?php echo $this->lang->line('school'); ?> <?php echo $this->lang->line('name'); ?></th>
-                        <td colspan="3"><?php echo $teacher->school_name; ?></td>        
+                        <td colspan="3">
+                            <?php echo $teacher->school_name; ?></td>
                     </tr>
                     <tr>
                         <th><?php echo $this->lang->line('name'); ?></th>
@@ -33,9 +33,9 @@
                     </tr>
                     <tr>
                         <th><?php echo $this->lang->line('gender'); ?></th>
-                        <td><?php echo $this->lang->line($teacher->gender); ?></td>        
+                        <td><?php echo $teacher->gender; ?></td>
                         <th><?php echo $this->lang->line('blood_group'); ?></th>
-                        <td><?php echo $this->lang->line($teacher->blood_group); ?></td>
+                        <td><?php echo $teacher->blood_group; ?></td>
                     </tr>
                     <tr>
                         <th><?php echo $this->lang->line('religion'); ?></th>
@@ -53,7 +53,7 @@
                         <th><?php echo $this->lang->line('salary_grade'); ?></th>
                         <td><?php echo $teacher->grade_name; ?></td>        
                         <th><?php echo $this->lang->line('salary_type'); ?></th>
-                        <td><?php echo $this->lang->line($teacher->salary_type); ?></td>
+                        <td><?php echo $teacher->salary_type; ?></td>
                     </tr>
                     <tr>
                         <th><?php echo $this->lang->line('email'); ?></th>

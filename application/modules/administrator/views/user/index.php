@@ -253,7 +253,8 @@
           type   : "POST",
           url    : "<?php echo site_url('student/get_single_student'); ?>",
           data   : {student_id : student_id},  
-          success: function(response){                                                   
+          success: function(response){
+              console.log(response);
              if(response)
              {
                 $('.fn_student_data').html(response);

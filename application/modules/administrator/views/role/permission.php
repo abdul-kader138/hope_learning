@@ -170,7 +170,7 @@
                                         <?php if (isset($modules) && !empty($modules)) { ?>
                                             <?php $module = 1;
                                             foreach ($modules AS $obj) {
-                                                if ($obj->id != '16' && $obj->id != '15' && $obj->id != '26') {
+                                                if ($obj->id != '16' && $obj->id != '15') {
                                                 ?>
                                                 <tr>
                                                     <td class="role-text"
